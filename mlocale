@@ -1,0 +1,7 @@
+#!/bin/bash
+
+locale-gen en_US.UTF-8
+dpkg-reconfigure locales
+echo "LC_ALL=en_US.UTF-8" > /etc/default/locale
+echo 'export LC_ALL="en_US.UTF-8"' >> ~/.bashrc
+source ~/.bashrc
